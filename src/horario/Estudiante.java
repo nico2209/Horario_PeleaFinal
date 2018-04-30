@@ -1,5 +1,7 @@
 package horario;
 
+import java.util.ArrayList;
+
 public class Estudiante {
-	public Horario horario;
+	public ArrayList<Materia> horario;
 }
