@@ -24,6 +24,7 @@ public class Escritor {
 				}
 				archivo.println(comas + std.horario.get(i).getNombre());
 			}
+			archivo.close();
 		} catch (IOException e) {
 			System.out.println("No se ha podido generar el archivo.");
 		}
