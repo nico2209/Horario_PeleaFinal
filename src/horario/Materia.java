@@ -1,9 +1,9 @@
 package horario;
 
 public class Materia {
-	private static String nombre;
-	private static Dia dia;
-	private static int hora;
+	private String nombre;
+	private Dia dia;
+	private int hora;
 	
 	public void setNombre (String nombre) {
 		this.nombre = nombre;
