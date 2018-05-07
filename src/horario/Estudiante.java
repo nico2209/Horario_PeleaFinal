@@ -3,8 +3,10 @@ package horario;
 import java.util.ArrayList;
 
 public class Estudiante {
-	public Estudiante(ArrayList<Materia> schedule) {
-		horario = schedule;
+	private String nombre;
+	private int semestre;
+	public Estudiante(String nombre, int semestre) {
+		this.nombre = nombre;
+		this.semestre = semestre;
 	}
-	public ArrayList<Materia> horario;
 }

@@ -1,17 +1,16 @@
 package horario;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.ArrayList;
 
 public class Escritor {
-	public void csv (Estudiante std) {
+	public void csv (ArrayList<Materia> horario) {
 		try {
 			PrintWriter archivo = new PrintWriter (new FileWriter("Horario.csv"));
 			archivo.println("Hora,Lunes,Martes,Miercoles,Jueves,Viernes");
-			for (int i = 0; i<std.horario.size(); i++) {
+			for (int i = 0; i<horario.size(); i++) {
 				int numComas;
-				switch (std.horario.get(i).getDia()) {
+				switch (horario.get(i).getDia()) {
 					case LUNES: numComas = 0; break;
 					case MARTES: numComas = 1; break;
 					case MIERCOLES: numComas = 2; break;
@@ -22,7 +21,7 @@ public class Escritor {
 				for (int j = 0; j<numComas; j++) {
 					comas += ",";
 				}
-				archivo.println(comas + std.horario.get(i).getNombre());
+				archivo.println(comas + horario.get(i).getNombre());
 			}
 			archivo.close();
 		} catch (IOException e) {
